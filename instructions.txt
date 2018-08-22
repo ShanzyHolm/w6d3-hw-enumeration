@@ -29,6 +29,6 @@ x- should be able to get journeys over a certain distance
 Extensions
 Traveller:
 
-should be able to calculate total distance travelled
-should be able to get a unique list of modes of transport
+x- should be able to calculate total distance travelled
+x- should be able to get a unique list of modes of transport
 Note: Remember to remove the x from xit() on the pending tests to run them.
