@@ -33,8 +33,11 @@ Traveller.prototype.getJourneysByTransport = function (transport) {
 }; //filters and gives all instances, unlike find method
 
 Traveller.prototype.getJourneysByMinDistance = function (minDistance) {
-
+  return this.journeys.filter((journey) => {
+    return journey.distance >= minDistance;
+  });
 };
+
 
 Traveller.prototype.calculateTotalDistanceTravelled = function () {
 
