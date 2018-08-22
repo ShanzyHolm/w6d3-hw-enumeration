@@ -45,15 +45,10 @@ Traveller.prototype.calculateTotalDistanceTravelled = function () {
   }, 0);
 };
 
-// Cinema.prototype.totalRunningTime = function () {
-//   return this.films.reduce((total, film) => {
-//     return total += film.length;
-//   }, 0);
-// };
-
 Traveller.prototype.getUniqueModesOfTransport = function () {
-
+  uniqueSet = new Set(this.getModesOfTransport());
+  return ([...uniqueSet]);
 };
-
+// FROM: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set
 
 module.exports = Traveller;
