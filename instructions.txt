@@ -19,12 +19,12 @@ You should write the code to make the Traveller tests pass, without modifying th
 MVP
 Traveller:
 
-should have a collection of journeys
-should be able to get the journeys start locations
-should be able to get the journeys end locations
-should be able to get a list of the modes of transport
-should be able to get journeys by transport
-should be able to get journeys over a certain distance
+x- should have a collection of journeys
+x- should be able to get the journeys start locations
+x- should be able to get the journeys end locations
+x- should be able to get a list of the modes of transport
+x- should be able to get journeys by transport
+x- should be able to get journeys over a certain distance
 
 Extensions
 Traveller:
