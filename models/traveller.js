@@ -54,10 +54,17 @@ Traveller.prototype.getUniqueModesOfTransport = function () {
 
 // return [...new Set(this.getModesOfTransport())];
 
+// USING INDEXOF TO GET UNIQUE SET
 // Traveller.prototype.getUniqueModesOfTransport = function () {
 //   let transportation = this.getModesOfTransport();
 //   return transportation.filter((mode, index) => {
 //     return transportation.indexOf(mode) === index;
+//   });
+// };
+
+// Traveller.prototype.getUniqueModesOfTransport = function () {
+//   return this.getModesOfTransport().filter((mode, index, array) => {
+//     return array.indexOf(mode) === index;
 //   });
 // };
 
