@@ -34,7 +34,7 @@ Traveller.prototype.getJourneysByTransport = function (transport) {
 
 Traveller.prototype.getJourneysByMinDistance = function (minDistance) {
   return this.journeys.filter((journey) => {
-    return journey.distance >= minDistance;
+    return journey.distance > minDistance;
   });
 };
 
@@ -42,13 +42,23 @@ Traveller.prototype.getJourneysByMinDistance = function (minDistance) {
 Traveller.prototype.calculateTotalDistanceTravelled = function () {
   return this.journeys.reduce((total, journey) => {
     return total += journey.distance;
-  }, 0);
+  }, 0); //total starts at zero; must be placed here so that it knows it is dealing with a number and not an object.  Do not actually need +=, can just put +
 };
+// ruby will always return something whether it was told to or not; JavaScriptneeds to be told.
 
 Traveller.prototype.getUniqueModesOfTransport = function () {
   uniqueSet = new Set(this.getModesOfTransport());
   return ([...uniqueSet]);
 };
 // FROM: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set
+
+// return [...new Set(this.getModesOfTransport())];
+
+// Traveller.prototype.getUniqueModesOfTransport = function () {
+//   let transportation = this.getModesOfTransport();
+//   return transportation.filter((mode, index) => {
+//     return transportation.indexOf(mode) === index;
+//   });
+// };
 
 module.exports = Traveller;
